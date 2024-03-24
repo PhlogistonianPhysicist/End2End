@@ -1,9 +1,8 @@
-<!-- TODO have constants defined for arena height and width -->
 <script>
-	const c_height = 300;
-	const c_width = 600;
+	const c_height = 122.5;
+	const c_width = 245;
 	const y_circle_center = c_height / 2;
-	const x_circle_center = (c_width * 12) / 27;
+	const x_circle_center = (c_width * 6) / 27;
 
 	import { onMount } from 'svelte';
 	let canvas;
@@ -11,6 +10,7 @@
 		const ctx = canvas.getContext('2d');
 		ctx.beginPath();
 		ctx.arc(x_circle_center, y_circle_center, (6 / 33) * c_width, 0, 2 * Math.PI, false);
+
 		ctx.fillStyle = 'blue';
 		ctx.fill();
 		ctx.beginPath();
